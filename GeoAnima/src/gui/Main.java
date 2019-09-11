@@ -5,7 +5,7 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 
 public class Main {
-	private void start() {
+	private static void start() {
 		JFrame frame = new JFrame("Test");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -20,6 +20,6 @@ public class Main {
 	}
 	
 	public static void main(String args[]) {
-		
+		start();
 	}
 }

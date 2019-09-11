@@ -1,43 +1,55 @@
 package entities;
 
 public class Point {
-	private int xPos;
-	private int yPos;
-	private boolean isPen;
-	private boolean isFixed;
-	public Point(int xPos, int yPos, boolean isPen, boolean isFixed) {
+	private double xPos;
+	private double yPos;
+	private int speed;
+	private boolean dir;
+	public Point() {
+		this.setxPos(0);
+		this.setyPos(0);
+		this.setSpeed(0);
+		this.setDir(true);
+	}
+	public Point(double xPos, double yPos) {
+		this.setxPos(xPos);
+		this.setyPos(yPos);	
+		this.setSpeed(0);
+		this.setDir(true);
+	}
+	public Point(double xPos, double yPos, boolean isPen, boolean isFixed, int speed, boolean dir) {
 		this.setxPos(xPos);
 		this.setyPos(yPos);
-		
+		this.setSpeed(speed);
+		this.setDir(dir);
 	}
-	public void update(int xPos, int yPos) {
-		if(!this.isFixed) {
-			this.setxPos(xPos);
-			this.setyPos(yPos);
-		}
+	public void update(double xPos, double yPos) {
+		this.setxPos(xPos);
+		this.setyPos(yPos);		
 	}
-	public int getxPos() {
+	public double getxPos() {
 		return xPos;
 	}
-	public void setxPos(int xPos) {
+	public void setxPos(double xPos) {
 		this.xPos = xPos;
 	}
-	public int getyPos() {
+	public double getyPos() {
 		return yPos;
 	}
-	public void setyPos(int yPos) {
+	public void setyPos(double yPos) {
 		this.yPos = yPos;
 	}
-	public boolean isPen() {
-		return isPen;
+
+	public int getSpeed() {
+		return speed;
 	}
-	public void setPen(boolean isPen) {
-		this.isPen = isPen;
+	public void setSpeed(int speed) {
+		this.speed = speed;
 	}
-	public boolean isFixed() {
-		return isFixed;
+	public boolean isDir() {
+		return dir;
 	}
-	public void setFixed(boolean isFixed) {
-		this.isFixed = isFixed;
+	public void setDir(boolean dir) {
+		this.dir = dir;
 	}
 }
