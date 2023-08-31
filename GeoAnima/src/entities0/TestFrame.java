@@ -1,4 +1,4 @@
-package entities;
+package entities0;
 
 import javax.swing.JFrame;
 
