@@ -18,8 +18,8 @@ public class TestPanel extends JPanel implements Runnable{
 
 	private static final long serialVersionUID = 1L;
 	private final String TEMP_IMG_FOLDER = "TEMP_IMG";
-	private final int WIDTH = 1000;
-	private final int HEIGHT = 1000;
+	private final int WIDTH = 600;
+	private final int HEIGHT = 600;
     private int delay;
     private final int CIRCLE_DIA = 25;
     private Thread animator;
